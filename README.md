@@ -1,10 +1,5 @@
 # Docker Compose NAS
 
-After searching for the perfect NAS solution, I realized what I wanted could be achieved 
-with some Docker containers on a vanilla Linux box. The result is an opinionated Docker Compose configuration capable of 
-browsing indexers to retrieve media resources and downloading them through a WireGuard VPN with port forwarding.
-SSL certificates and remote access through Tailscale are supported.
-
 Requirements: Any Docker-capable recent Linux box with Docker Engine and Docker Compose V2.
 I am running it in Ubuntu Server 22.04; I also tested this setup on a [Synology DS220+ with DSM 7.1](#synology-quirks).
 

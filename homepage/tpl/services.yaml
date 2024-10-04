@@ -1,3 +1,270 @@
 ---
 # For configuration options and examples, please see:
-# https://gethomepage.dev/en/configs/services
+# https://gethomepage.dev/latest/configs/services
+# For Icons, see:
+# https://github.com/walkxcode/dashboard-icons/tree/main/png
+
+- Media:
+    - Jellyfin:
+        icon: jellyfin.png
+        href: https://watch.ciri.one/
+        description: Media Player
+        server: my-docker
+        container: jellyfin
+        widget:
+            type: jellyfin
+            url: https://watch.ciri.one
+            key: c66ab17341d64ddeb424e33680bca715
+            enableBlocks: true
+            enableNowPlaying: false
+            enableUser: false
+            showEpisodeNumber: false
+            expandOneStreamToTwoRows: true
+
+- Photos:
+    - Immich:
+        icon: immich.png
+        href: https://immich.ciri.one/
+        description: Image Album
+        server: my-docker
+        container: immich_server
+        widget:
+            type: immich
+            url: https://immich.ciri.one
+            key: 7WwtaOIhXCo5zzxKtFiagT6Ao4yLrY8JPP4k1kI
+
+- Music:
+    - Navidrome:
+        icon: navidrome.png
+        href: https://music.ciri.one/
+        description: Music Player
+        server: my-docker
+        container: navidrome
+        widget:
+            #type: navidrome
+            #url: https://music.ciri.one
+            #user: homepage
+            #password: homepage1104
+            #token: homepage1104 #token #md5 (password+salt)
+            #salt: #randomsalt
+
+- Bookmarks:
+    - Linkwarden:
+        icon: linkwarden.png
+        href: https://grimoire.ciri.one/
+        description: Bookmark Tool
+        server: my-docker
+        container: linkwarden
+        widget:
+            type: linkwarden
+            url: https://grimoire.ciri.one
+            key: eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..2d4gnIxvIPGTvzNT.CuY6MYEkvxZdDUmzrgBiXUB4teXMABuryGhHKLglij7tuY7YQZoxvOxoyh4HMQif93EHOz4ABX9Z50_-HVr6WsaLC55vBgNwuXywp87C4D7tXJh7gwDj.j7Ba2oQKN4-RZ8cdLf6LtQ
+
+- TV & Anime:
+    - Sonarr:
+        icon: sonarr.png
+        href: https://sonarr.ciri.one/
+        description: Series management
+        server: my-docker
+        container: sonarr
+        widget:
+            type: sonarr
+            url: https://sonarr.ciri.one
+            key: 8e913422c26e41a4bbc1bead8a42ca43
+    - Sonarr-Anime:
+        icon: sonarr.png
+        href: https://sonarranime.ciri.one/
+        description: Anime management
+        server: my-docker
+        container: sonarr-anime
+        widget:
+            type: sonarr
+            url: https://sonarranime.ciri.one
+            key: 61495d737e624249bf4439a5b7a16a25
+
+- Movies:
+    - Radarr:
+        icon: radarr.png
+        href: https://radarr.ciri.one/
+        description: Movie management
+        server: my-docker
+        container: radarr
+        widget:
+            type: radarr
+            url: https://radarr.ciri.one
+            key: 70e7a7137c2c4640a9fd47aa41ea5ef7
+
+- Indexer:
+    - Prowlarr:
+        icon: prowlarr.png
+        href: https://prowlarr.ciri.one/
+        description: Media Indexer
+        server: my-docker
+        container: prowlarr
+        widget:
+            type: prowlarr
+            url: https://prowlarr.ciri.one
+            key: cfa9c6148bb7489b88470f3a82f7749a
+
+- Downloads:
+    - qBittorrent:
+        icon: qbittorrent.png
+        href: https://download.ciri.one/
+        description: Downloader
+        server: my-docker
+        container: qbittorrent
+        widget:
+            type: qbittorrent
+            url: https://download.ciri.one
+            username: admin
+
+#- Game Server:
+#    - Pterodactyl:
+#        icon: pterodactyl.png
+#        href: https://gameserver.ciri.one/
+#        description: Game Server Dashboard
+#        server: my-docker
+#        container: pterodactyl
+#        widget:
+#            type: pterodactyl
+#            url: https://gameserver.ciri.one
+#            key:
+
+
+- Authentication:
+    - Authentik:
+        icon: authentik.png
+        href: https://authentik.ciri.one/
+        description: Identity Provider
+        server: my-docker
+        container: authentik
+        widget:
+            type: authentik
+            url: https://authentik.ciri.one
+            key: dW4BZrMkcU0PVd3OQC1M24FDAf6hD2N6dsz26EMguJxMnDQcsdHli7rrJStU
+
+- VPN:
+    - Tailscale:
+        icon: tailscale.png
+        href: https://tailscale.com/
+        description: Tunnel
+        server: my-docker
+        container: tailscale
+        widget:
+            type: tailscale
+            deviceid: nGfmdv3CNTRL
+            key: tskey-api-kB5QPcz4ai11CNTRL-taDDePc25X6S46YDTfkhT63PEanoNmXJ
+
+- Proxy:
+    - Nginx Proxy Manager:
+        icon: nginx-proxy-manager.png
+        href: https://proxy.ciri.one/
+        description: Reverse Proxy
+        server: my-docker
+        container: npm
+        widget:
+            type: npm
+            url: https://proxy.ciri.one
+            username: admin@ciri.one
+            password: Rsr-1104velanata
+- Cooking:
+    - Tandoor:
+        icon: tandoor.png
+        href: https://recipe.ciri.one/
+        description: Recipe management
+        server: my-docker
+        container: tandoor
+        widget:
+            type: tandoor
+            url: https://recipe.ciri.one
+            key:  tda_ebab0308_820e_44dc_9111_e54c0a10d225
+
+# Applications listed with Docker
+- Apps:
+    - Firefly:
+        icon: firefly.png
+        href: https://firefly.ciri.one
+        server: my-docker
+        container: firefly
+    - Firefly Data Importer:
+        icon: firefly.png
+        href: https://fireflyimport.ciri.one
+        server: my-docker
+        container: firefly
+    - Traccar:
+        icon: traccar.png
+        href: https://traccar.ciri.one
+        server: my-docker
+        container: traccar
+    - Bitwarden:
+        icon: bitwarden.png
+        href: https://vault.ciri.one
+        server: my-docker
+        container: bitwarden
+    - Reactive Resume:
+        icon: open-resume.png
+        href: https://resume.ciri.one
+        server: my-docker
+        container: rxv4
+    - Car Maintenance:
+        icon: lubelogger.png
+        href: https://garage.ciri.one
+        server: my-docker
+        container: lubelogger
+    - Meshcentral:
+        icon: meshcentral.png
+        href: https://remote.ciri.one
+        server: my-docker
+        container: meshcentral
+    - Jellystat:
+        icon: jellystat.png
+        href: https://jellystat.ciri.one
+        server: my-docker
+        container: jellystat
+    - Radicale:
+        icon: radicale.png
+        href: https://radicale.ciri.one
+        server: my-docker
+        container: radicale
+
+# Files listed
+- Files:
+    - Filebrowser:
+        icon: filebrowser.png
+        href: https://cloud.ciri.one
+        server: my-docker
+        container: filebrowser
+    - Stirling PDF:
+        icon: stirling-pdf.png
+        href: https://pdf.ciri.one
+        server: my-docker
+        container: stirlingpdf
+    - CryptPad:
+        icon: cryptpad.png
+        href: https://crypt.ciri.one
+        server: my-docker
+        container: cryptpad
+    - Code Server:
+        icon: code-server.png
+        href: https://code.ciri.one
+        server: my-docker
+        container: binhex-code-server
+    - Gitea:
+        icon: gitea.png
+        href: https://gitea.ciri.one
+        server: my-docker
+        container: gitea
+
+# Server Links
+- Server:
+    - Dozzle:
+        icon: dozzle.png
+        href: https://logs.ciri.one
+        server: my-docker
+        container: dozzle
+
+# Network Links
+- Network:
+    - Unifi:
+        icon: unifi.png
+        href: https://unifi.ui.com
